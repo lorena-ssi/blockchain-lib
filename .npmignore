@@ -1,0 +1,6 @@
+.eslintrc.js
+.nyc_output/
+.vscode/
+coverage/
+node_modules/
+test/
