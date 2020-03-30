@@ -1,6 +1,7 @@
 .env
 .eslintrc.js
 .nyc_output/
+.travis.yml
 .vscode/
 coverage/
 node_modules/
