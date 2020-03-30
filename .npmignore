@@ -1,3 +1,4 @@
+.env
 .eslintrc.js
 .nyc_output/
 .vscode/
