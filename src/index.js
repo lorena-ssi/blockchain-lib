@@ -8,6 +8,9 @@ module.exports = class BlockchainInterface {
     if (!this.connect) {
       /* istanbul ignore next */
       throw new Error('Blockchain must have function `connect`!')
+    } else if (!this.setKeyring) {
+      /* istanbul ignore next */
+      throw new Error('Blockchain must have function `setKeyring`!')
     } else if (!this.disconnect) {
       /* istanbul ignore next */
       throw new Error('Blockchain must have function `disconnect`!')
