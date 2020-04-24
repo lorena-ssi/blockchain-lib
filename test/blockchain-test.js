@@ -11,6 +11,7 @@ describe('Lorena Blockchain interface', function () {
     class TestBlockchain extends BlockchainInterface {
       connect () {}
       disconnect () {}
+      setKeyring () {}
       registerDid () {}
       getActualDidKey () {}
       registerDidDocument () {}
@@ -25,6 +26,7 @@ describe('Lorena Blockchain interface', function () {
   it('Should generate a correct class if some methods are async', () => {
     class TestBlockchain extends BlockchainInterface {
       disconnect () {}
+      setKeyring () {}
       registerDid () {}
       getActualDidKey () {}
       registerDidDocument () {}
@@ -37,6 +39,7 @@ describe('Lorena Blockchain interface', function () {
   it('Should generate a correct class if some methods are async', () => {
     class TestBlockchain extends BlockchainInterface {
       connect () {}
+      setKeyring () {}
       registerDid () {}
       getActualDidKey () {}
       registerDidDocument () {}
@@ -50,6 +53,19 @@ describe('Lorena Blockchain interface', function () {
     class TestBlockchain extends BlockchainInterface {
       connect () {}
       disconnect () {}
+      registerDid () {}
+      getActualDidKey () {}
+      registerDidDocument () {}
+      getDidDocHash () {}
+    }
+    (() => new TestBlockchain()).should.throw(Error, 'Blockchain must have function `setKeyring`!')
+  })
+
+  it('Should generate a correct class if some methods are async', () => {
+    class TestBlockchain extends BlockchainInterface {
+      connect () {}
+      disconnect () {}
+      setKeyring () {}
       getActualDidKey () {}
       registerDidDocument () {}
       getDidDocHash () {}
@@ -62,6 +78,7 @@ describe('Lorena Blockchain interface', function () {
     class TestBlockchain extends BlockchainInterface {
       connect () {}
       disconnect () {}
+      setKeyring () {}
       registerDid () {}
       registerDidDocument () {}
       getDidDocHash () {}
@@ -74,6 +91,7 @@ describe('Lorena Blockchain interface', function () {
     class TestBlockchain extends BlockchainInterface {
       connect () {}
       disconnect () {}
+      setKeyring () {}
       registerDid () {}
       getActualDidKey () {}
       getDidDocHash () {}
@@ -86,6 +104,7 @@ describe('Lorena Blockchain interface', function () {
     class TestBlockchain extends BlockchainInterface {
       connect () {}
       disconnect () {}
+      setKeyring () {}
       registerDid () {}
       getActualDidKey () {}
       registerDidDocument () {}
@@ -98,6 +117,7 @@ describe('Lorena Blockchain interface', function () {
     class TestBlockchain extends BlockchainInterface {
       connect () {}
       disconnect () {}
+      setKeyring () {}
       registerDid () {}
       getActualDidKey () {}
       registerDidDocument () {}
